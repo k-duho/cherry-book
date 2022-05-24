@@ -55,3 +55,29 @@ class User
 end
 
 ```
+
+
+---
+
+### class와 when .. case절의 조합
+- case의 오브젝트가 어떤 클래스에 속하는지 when절에서 판단하는게 가능.
+
+```rb
+def test(object)
+  case object
+  when Array
+    puts "object is array"
+  when String
+    puts "object is string"
+  when Hash
+    puts "object is hash"
+  else
+    puts "nothing"
+  end
+end
+
+object = "string"
+test(object)
+=> "object is string"
+
+```

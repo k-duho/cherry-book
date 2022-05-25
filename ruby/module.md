@@ -61,3 +61,34 @@ animal = Animal.create_animal("dev.duho")
 animal.print_name
 => "name: dev.duho"
 ```
+---
+<br>
+
+### Enumerable Module
+- 루비의 반복문 처리가 가능한 클래스에 include되어 있음.
+- Enumerable Module를 incldue 하면 사용 가능한 메소드들
+  - map
+  - select
+  - find
+  - count
+  - 등
+
+
+### Comparable Module
+- 비교연산을 잘하게 해 줌
+- Comparable Module를 incldue 하면 사용 가능한 메소드들
+  - ==
+  - !=
+  - 등 루비의 기본 비교 연산자
+
+---
+<br>
+### Kernel Module
+- 
+- Kernel Module를 incldue 하면 사용 가능한 메소드들
+  - puts
+  - p
+  - pp
+  - print
+  - require
+  - loop

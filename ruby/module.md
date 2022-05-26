@@ -84,7 +84,8 @@ animal.print_name
 ---
 <br>
 ### Kernel Module
-- 
+- 기본적인 구문들에서 보던 애들이 정의되어 있음
+- Object 클래스가 Kernel 모듈을 include중
 - Kernel Module를 incldue 하면 사용 가능한 메소드들
   - puts
   - p
@@ -92,3 +93,44 @@ animal.print_name
   - print
   - require
   - loop
+  - 등
+
+---
+<br>
+
+
+### 메소드 탐색 룰
+코드가 아래와 같을 때, 출력되는 순서  
+=> "[Truck] [TestB] [TestA] [Car] #<Truck:0x00007f8bb90c96c0>"
+
+```rb
+module TestA
+  def to_s
+    "[TestA] #{super}"
+  end
+end
+
+module TestB
+  def to_s
+    "[TestB] #{super}"
+  end
+end
+
+class Car
+  def to_s
+    "[Car] #{super}"
+  end
+end
+
+class Truck < Car
+  include TestA
+  include TestB
+
+  def to_s
+    "[Truck] #{super}"
+  end
+end
+
+truck = Truck.new
+truck.to_s
+```

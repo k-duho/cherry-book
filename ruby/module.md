@@ -100,8 +100,10 @@ animal.print_name
 
 
 ### 메소드 탐색 룰
-코드가 아래와 같을 때, 출력되는 순서  
+- 코드가 아래와 같을 때, 출력되는 순서
 => "[Truck] [TestB] [TestA] [Car] #<Truck:0x00007f8bb90c96c0>"
+
+- 이 순서는 Truck.ancestors으로도 확인 가능.
 
 ```rb
 module TestA

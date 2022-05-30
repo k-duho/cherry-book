@@ -83,26 +83,27 @@ end
 
 ---
 
-### 메소드 인수로 블록을 건내는 방법
-
+### 메소드 인수에 블록을 명시적으로 지정하는 방법
+- yield대신에 `&`가 붙은 명명
 ```rb
-def to_en(&block)
-  hellos = ["good morning", "good_afternoon", "good_afternoon"]
-
-  hello_common(hellos, &block)
+def hello_common(&block)
+  puts "좋은 아침"
+  text = block&.call("안녕")
+  puts text
+  puts "좋은 밤"
 end
 
-def to_jp(&block)
-  hellos = ["おはよう", "こんにちは", "こんばんは"]
-
-  hello_common(hellos, &block)
+hello_common do |t|
+  t * 2
 end
+=> 좋은 아침
+안녕안녕
+좋은 밤
 
+hello_common # => 인수를 지정하지 않아도 Argument Error는 발생하지 않음 
+=> 좋은 아침
 
-def hello_common(hellos, &block)
-end
+좋은 밤
 
-def to_jp
-end
 
 ```

@@ -1,0 +1,18 @@
+## BEM(BlockElementModifier)
+
+### BEM이란(BlockElementModifier)
+- 컴포넌트클래스 이름 작성시에 참고
+- Block, Element, Modifier단위로 나누어서 명명.
+- block__element--modifier
+
+### Example
+※ 카드 하나를 기준으로 설명
+
+- 카드자체가 블록.
+- 카드안의 타이틀, 상세정보는 전부 엘리먼트
+- Modifier는 색상이나, 특별한 추가 수정이 있을 때 적용
+
+.card
+.card__title
+.card__imagebox
+.card__imagebox--blue

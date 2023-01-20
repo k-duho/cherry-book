@@ -1,5 +1,5 @@
 ## Request / Response
-
+- 결국엔 문자열이다.
 
 ### Rails에서 Request의 흐름
 Request -> Webserver -> Rack -> Middleware -> Router -> Controller -> View
@@ -36,3 +36,26 @@ Read: User-Agent: curl/7.77.0
 Read: Accept: */*
 Read:
 ```
+
+### 헤더를 포함하는 웹서버 예시
+TODO
+
+<br>
+
+---
+
+## Rack
+TODO
+
+<br>
+
+---
+
+## Middleware
+TODO
+
+<br>
+
+---
+
+
